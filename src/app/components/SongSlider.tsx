@@ -443,8 +443,8 @@ export const SongSlider: React.FC<SongSliderProps> = ({
           </div>
         ))}
       </div>
-      <button onClick={prevSlide} className="prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-[#fc1eaf]/70 hover:bg-white text-white rounded-full w-12 h-12 flex items-center justify-center shadow transition md:block hidden" aria-label="이전 슬라이드">◀</button>
-      <button onClick={nextSlide} className="next-btn absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-[#fc1eaf]/70 hover:bg-white text-white rounded-full w-12 h-12 flex items-center justify-center shadow transition md:block hidden" aria-label="다음 슬라이드">▶</button>
+      <button onClick={prevSlide} className="prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-[#FC01C5]/70 hover:bg-[#060261]/90 text-white rounded-full w-15 h-15 flex items-center justify-center shadow transition md:block hidden" aria-label="이전 슬라이드">◀</button>
+      <button onClick={nextSlide} className="next-btn absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-[#FC01C5]/70 hover:bg-[#060261]/90 text-white rounded-full w-15 h-15 flex items-center justify-center shadow transition md:block hidden" aria-label="다음 슬라이드">▶</button>
       <div className="flex justify-center gap-2 absolute bottom-37 md:bottom-22 left-0 right-0">
         {songs.map((_, idx) => (
           <button 
