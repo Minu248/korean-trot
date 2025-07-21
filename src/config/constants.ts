@@ -68,6 +68,6 @@ export const MELON_URLS = {
 
 // API 엔드포인트
 export const API_ENDPOINTS = {
-  SONGS_DATA: "https://api.sheetbest.com/sheets/88c2b9c7-8d30-462b-ae7c-a4859aaf6955",
+  SONGS_DATA: "https://api.sheetbest.com/sheets/bc99d0ed-dd73-456c-b657-3e92805af89a",
   FORM_SUBMIT: "https://forms.gle/zQTC3ab4sgzJEPEY6",
 } as const; 

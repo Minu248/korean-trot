@@ -107,11 +107,11 @@ export default function HomeContent() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#FF2A68] via-[#A033FF] to-[#0B63F6] px-4">
+    <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#060261] via-[#A901FD] to-[#07002F] px-4">
       <div className="flex-grow w-full flex flex-col items-center justify-center">
         <div className="text-center mb-8">
-          <div className="text-lg text-white/90 mb-2">들어볼래?</div>
-          <div className="text-5xl font-bold text-white drop-shadow">한곡인디</div>
+          <div className="text-lg text-white/90 mb-3">나를 울리고 웃기는 노래</div>
+          <div className="text-5xl font-bold text-white drop-shadow">매일 트로트</div>
         </div>
         
         <button
@@ -123,16 +123,16 @@ export default function HomeContent() {
         </button>
         
         <div className="mt-1 mb-2 text-white/90 text-base text-center font-medium">
-          당신의 하루를 바꿔줄 한국 인디 음악을 발견하세요
+          당신 이야기 같은 노래, 오늘은 이 곡입니다
         </div>
         
         <div className="mb-6 text-white/90 text-base text-center font-medium">
-          하루에 한 번 10곡의 음악을 추천 받을 수 있어요
+          하루에 한 번 10곡의 트로트를 추천 받을 수 있어요
         </div>
         
         {recommendCount > 0 && (
           <Link href="/today" className="w-full flex justify-center mb-4">
-            <button className="w-full max-w-xs bg-[#A033FF] text-white rounded-full px-6 py-3 shadow-md hover:bg-[#7c25c9] transition text-base font-medium">
+            <button className="w-full max-w-xs bg-[#FC01C5] text-white rounded-full px-6 py-3 shadow-md hover:bg-[#7c25c9] transition text-base font-medium">
               오늘 추천 받은 곡 보기
             </button>
           </Link>

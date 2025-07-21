@@ -139,20 +139,20 @@ export default function TodayPageContent() {
   }, [recommendedSongs, router]);
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center bg-gradient-to-b from-[#FF2A68] via-[#A033FF] to-[#0B63F6] px-4 overflow-x-hidden">
+    <main className="relative min-h-screen flex flex-col items-center bg-gradient-to-b from-[#060261] via-[#A901FD] to-[#07002F] px-4 overflow-x-hidden">
       <div className="flex-grow w-full flex flex-col items-center justify-center">
         <div className={`text-center mb-4 transition-all duration-800 ease-out ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
         }`}>
-          <div className="text-lg text-white/90 mt-4 mb-2">들어볼래?</div>
-          <div className="text-4xl font-bold text-white drop-shadow">한곡인디</div>
+          <div className="text-lg text-white/90 mt-4 mb-2">나를 울리고 웃기는 노래</div>
+          <div className="text-4xl font-bold text-white drop-shadow">매일 트로트</div>
         </div>
         <div className={`mb-2 text-white/90 text-base text-center font-medium transition-all duration-800 ease-out ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-        }`} style={{ transitionDelay: '200ms' }}>당신의 하루를 바꿔줄 한국 인디 음악을 발견하세요</div>
+        }`} style={{ transitionDelay: '200ms' }}>당신 이야기 같은 노래, 오늘은 이 곡입니다</div>
         <div className={`mb-8 md:mb-2 text-white/90 text-base text-center font-medium transition-all duration-800 ease-out ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-        }`} style={{ transitionDelay: '400ms' }}>하루에 한 번 10곡의 음악을 추천 받을 수 있어요</div>
+        }`} style={{ transitionDelay: '400ms' }}>하루에 한 번 10곡의 트로트를 추천 받을 수 있어요</div>
         <div className="w-full max-w-2xl mb-6 mt-10 md:mb-16 md:mt-32 relative h-[650px] z-20">
           <SongSlider 
             songsData={recommendedSongs}

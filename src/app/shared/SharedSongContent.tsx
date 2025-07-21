@@ -39,7 +39,7 @@ export default function SharedSongContent() {
 
   if (!song) {
     return (
-      <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#FF2A68] via-[#A033FF] to-[#0B63F6] px-4">
+      <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-[#060261] via-[#A901FD] to-[#07002F] px-4">
         <div className="text-white text-center">
           <div className="text-2xl mb-4">🎵</div>
           <div className="text-lg">곡 정보를 불러오는 중...</div>
@@ -51,7 +51,7 @@ export default function SharedSongContent() {
   const youtubeId = getYoutubeId(song["링크"]);
 
   return (
-    <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#FF2A68] via-[#A033FF] to-[#0B63F6] px-4 py-8">
+    <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#060261] via-[#A901FD] to-[#07002F] px-4 py-8">
       <div className="flex-grow w-full flex flex-col items-center justify-center">
         {/* 메시지 */}
         <div className="text-center mb-6">

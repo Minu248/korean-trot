@@ -334,8 +334,8 @@ export const SongSlider: React.FC<SongSliderProps> = ({
             ref={(el) => { if (el) slidesRef.current[index] = el; }}
             className="slide bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6 flex flex-col items-center"
           >
-            <div className="text-lg font-semibold text-[#A033FF] mb-2">{song["곡 제목"] || "제목 없음"}</div>
-            <div className="text-gray-700 mb-4">{song["아티스트"] || "아티스트 없음"}</div>
+            <div className="text-3xl font-semibold text-[#A033FF] mb-2">{song["곡 제목"] || "제목 없음"}</div>
+            <div className="text-xl text-gray-700 mb-4">{song["아티스트"] || "아티스트 없음"}</div>
             <div className="w-full aspect-[16/9] mb-4">
               {index === currentIndex ? (
                 getYoutubeId(song["링크"]) ? (
@@ -437,7 +437,7 @@ export const SongSlider: React.FC<SongSliderProps> = ({
               </Link>
             */}
               <a href={API_ENDPOINTS.FORM_SUBMIT} target="_blank" rel="noopener noreferrer" className="w-full">
-                <button className="w-full bg-[#EC3C89] text-white rounded-[5px] px-6 py-3 shadow-md hover:bg-[#e32075] transition text-base font-medium">📫나만 알고 있는 인디 노래 제보하기</button>
+                {/*<button className="w-full bg-[#EC3C89] text-white rounded-[5px] px-6 py-3 shadow-md hover:bg-[#e32075] transition text-base font-medium">📫나만 알고 있는 인디 노래 제보하기</button>*/}
               </a>
             </div>
           </div>
@@ -445,7 +445,7 @@ export const SongSlider: React.FC<SongSliderProps> = ({
       </div>
       <button onClick={prevSlide} className="prev-btn absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-[#fc1eaf]/70 hover:bg-white text-white rounded-full w-12 h-12 flex items-center justify-center shadow transition md:block hidden" aria-label="이전 슬라이드">◀</button>
       <button onClick={nextSlide} className="next-btn absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-[#fc1eaf]/70 hover:bg-white text-white rounded-full w-12 h-12 flex items-center justify-center shadow transition md:block hidden" aria-label="다음 슬라이드">▶</button>
-      <div className="flex justify-center gap-2 absolute bottom-26 md:bottom-12 left-0 right-0">
+      <div className="flex justify-center gap-2 absolute bottom-37 md:bottom-22 left-0 right-0">
         {songs.map((_, idx) => (
           <button 
             key={idx} 

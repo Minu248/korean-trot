@@ -22,7 +22,7 @@ export default function Playlist() {
   }, []);
 
   return (
-    <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#FF2A68] via-[#A033FF] to-[#0B63F6] px-4 py-8">
+    <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#060261] via-[#A901FD] to-[#07002F] px-4 py-8">
       <h1 className="text-2xl font-bold mb-6 text-center text-white drop-shadow">내 플레이리스트</h1>
       {songs.length === 0 ? (
         <div className="text-white/90 mb-8">저장된 곡이 없어요.</div>
