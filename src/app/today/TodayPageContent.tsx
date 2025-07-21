@@ -144,7 +144,7 @@ export default function TodayPageContent() {
         <div className={`text-center mb-4 transition-all duration-800 ease-out ${
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
         }`}>
-          <div className="text-lg text-white/90 mt-4 mb-2">나를 울리고 웃기는 노래</div>
+          <div className="text-lg text-white/90 mt-4 mb-2">나를 울리고 웃기는</div>
           <div className="text-4xl font-bold text-white drop-shadow">매일 트로트</div>
         </div>
         <div className={`mb-2 text-white/90 text-base text-center font-medium transition-all duration-800 ease-out ${

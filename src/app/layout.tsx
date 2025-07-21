@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "들어볼래? 한 곡 Indie",
-  description: "당신의 하루를 바꿔줄 오늘 한 곡",
-  metadataBase: new URL('https://onesongindie.com'),
+  title: "매일 트로트, 당신을 위한 새로운 트로트",
+  description: "오늘 기분에 맞는 새로운 트로트 곡을 발견하세요.",
+  metadataBase: new URL('https://korean-trot.vercel.app/'),
   icons: {
     icon: [
       { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
