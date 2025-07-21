@@ -110,24 +110,20 @@ export default function HomeContent() {
     <main className="min-h-screen flex flex-col items-center bg-gradient-to-b from-[#060261] via-[#A901FD] to-[#07002F] px-4">
       <div className="flex-grow w-full flex flex-col items-center justify-center">
         <div className="text-center mb-8">
-          <div className="text-lg text-white/90 mb-3">나를 울리고 웃기는 노래</div>
+          <div className="text-2xl text-white/90 mb-3">나를 울리고 웃기는</div>
           <div className="text-5xl font-bold text-white drop-shadow">매일 트로트</div>
         </div>
         
         <button
-          className={`w-32 h-32 md:w-50 md:h-50 ${canRecommend ? 'bg-white/20 hover:bg-white/30' : 'bg-gray-400/20 hover:bg-gray-400/30'} text-white rounded-full shadow-lg transition mb-4 flex items-center justify-center text-4xl md:text-6xl border-2 border-white/40 backdrop-blur`}
+          className={`w-50 h-50 md:w-50 md:h-50 ${canRecommend ? 'bg-white/20 hover:bg-white/30' : 'bg-gray-400/20 hover:bg-gray-400/30'} text-white rounded-full shadow-lg transition mb-4 flex items-center justify-center text-6xl md:text-6xl border-2 border-white/40 backdrop-blur`}
           onClick={handleRecommendClick}
-          aria-label="오늘의 인디 한 곡 추천받기"
+          aria-label="오늘의 트로트 추천받기"
         >
           {canRecommend ? '🎵' : '⏰'}
         </button>
         
-        <div className="mt-1 mb-2 text-white/90 text-base text-center font-medium">
-          당신 이야기 같은 노래, 오늘은 이 곡입니다
-        </div>
-        
-        <div className="mb-6 text-white/90 text-base text-center font-medium">
-          하루에 한 번 10곡의 트로트를 추천 받을 수 있어요
+        <div className="mt-1 mb-2 text-white/90 text-2xl text-center font-medium">
+          당신을 위한 새로운 곡이<br /> 준비되어 있어요
         </div>
         
         {recommendCount > 0 && (

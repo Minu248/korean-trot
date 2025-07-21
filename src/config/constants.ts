@@ -12,7 +12,7 @@ export const TOAST_MESSAGES = {
   FETCH_ERROR: "곡을 불러오는 중 오류가 발생했습니다",
   SAVED_TO_PLAYLIST: "플레이리스트에 저장했어요❤️",
   LINK_COPIED: "링크가 복사되었어요!",
-  FINDING_MUSIC: "지금까지 들어본 적 없는 새로운 음악을 찾고 있어요",
+  FINDING_MUSIC: "오늘 기분에 맞는  트로트 곡을 찾고 있어요",
 } as const;
 
 // 로컬 스토리지 키 상수
