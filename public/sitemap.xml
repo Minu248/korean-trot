@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.onesongindie.com/</loc>
+    <loc>https://korean-trot.vercel.app/</loc>
   </url>
   <url>
-    <loc>https://www.onesongindie.com/playlist</loc>
+    <loc>https://korean-trot.vercel.app/playlist</loc>
   </url>
   <url>
-    <loc>https://www.onesongindie.com/today</loc>
+    <loc>https://korean-trot.vercel.app/today</loc>
   </url>
   <url>
-    <loc>https://www.onesongindie.com/today/songs</loc>
+    <loc>https://korean-trot.vercel.app/today/songs</loc>
   </url>
 </urlset> 
