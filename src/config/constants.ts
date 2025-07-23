@@ -12,7 +12,7 @@ export const TOAST_MESSAGES = {
   FETCH_ERROR: "곡을 불러오는 중 오류가 발생했습니다",
   SAVED_TO_PLAYLIST: "플레이리스트에 저장했어요❤️",
   LINK_COPIED: "링크가 복사되었어요!",
-  FINDING_MUSIC: "오늘 기분에 맞는  트로트 곡을 찾고 있어요",
+  FINDING_MUSIC: "오늘 기분에 맞는 트로트 곡을 찾고 있어요",
 } as const;
 
 // 로컬 스토리지 키 상수
@@ -68,6 +68,6 @@ export const MELON_URLS = {
 
 // API 엔드포인트
 export const API_ENDPOINTS = {
-  SONGS_DATA: "https://api.sheetbest.com/sheets/bc99d0ed-dd73-456c-b657-3e92805af89a",
+  // SONGS_DATA: "https://api.sheetbest.com/sheets/bc99d0ed-dd73-456c-b657-3e92805af89a", // Supabase로 변경됨
   FORM_SUBMIT: "https://forms.gle/zQTC3ab4sgzJEPEY6",
 } as const; 

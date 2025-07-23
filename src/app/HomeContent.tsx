@@ -5,9 +5,9 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { Song } from "@/types/song";
 import { 
   TOAST_MESSAGES, 
-  API_ENDPOINTS, 
   ANIMATION_TIMING 
 } from "@/config/constants";
+import { fetchRandomSongsFromSupabase } from "@/utils/supabaseUtils";
 import { 
   getTodayRecommendedSongs, 
   addTodayRecommendedSong 
@@ -45,42 +45,29 @@ export default function HomeContent() {
     try {
       setIsLoading(true);
       
-      // API 호출을 비동기로 처리하되, 로딩 화면은 계속 유지
-      const fetchPromise = fetch(API_ENDPOINTS.SONGS_DATA);
+      // Supabase에서 랜덤 곡 데이터 가져오기
+      const fetchPromise = fetchRandomSongsFromSupabase(10);
       
       // 최소 4초는 로딩 화면을 보여주기 위해 Promise.all 사용
-      const [res] = await Promise.all([
+      const [songs] = await Promise.all([
         fetchPromise,
         new Promise(resolve => setTimeout(resolve, ANIMATION_TIMING.LOADING_SCREEN_DURATION))
       ]);
       
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-      let songs: Song[] = await res.json();
       if (songs.length === 0) throw new Error("곡 데이터가 없습니다");
       
       // 이미 추천된 곡 필터링
       const recommendedSongs = getTodayRecommendedSongs();
-      songs = songs.filter(song => !recommendedSongs.find(s => s["링크"] === song["링크"]));
+      const filteredSongs = songs.filter(song => !recommendedSongs.find(s => s["링크"] === song["링크"]));
       
-      if (songs.length === 0) {
+      if (filteredSongs.length === 0) {
         setIsLoading(false);
         showToast(TOAST_MESSAGES.NO_MORE_SONGS);
         return;
       }
       
-      // 랜덤으로 10개의 곡 선택
-      const randomSongs: Song[] = [];
-      const tempSongs = [...songs];
-      const selectionCount = Math.min(10, tempSongs.length);
-      
-      for (let i = 0; i < selectionCount; i++) {
-        const randomIndex = Math.floor(Math.random() * tempSongs.length);
-        randomSongs.push(tempSongs[randomIndex]);
-        tempSongs.splice(randomIndex, 1);
-      }
-      
       // 추천 처리
-      processRecommendation(randomSongs);
+      processRecommendation(filteredSongs);
       setIsSharedMode(false);
       
       // 로딩 상태를 유지한 채로 바로 /today로 이동
