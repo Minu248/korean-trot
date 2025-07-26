@@ -8,6 +8,19 @@ export interface Song {
 }
 
 /**
+ * Supabase songs 테이블 구조 타입 정의
+ */
+export interface SupabaseSong {
+  id?: number;
+  title: string;
+  artist: string;
+  youtube_url: string;
+  site_type: string;
+  created_at?: string;
+  updated_at?: string;
+}
+
+/**
  * 음악 플랫폼 관련 타입 정의
  */
 export type MusicPlatform = 'youtube' | 'spotify' | 'apple' | 'vibe' | 'melon';
