@@ -10,18 +10,18 @@ export async function generateMetadata({ searchParams }) {
   
   if (title && artist) {
     return {
-      title: `${title} - ${artist} | 친구가 추천한 곡 | 들어볼래? 한 곡 Indie`,
-      description: `친구가 추천한 한국 인디 노래: ${title} - ${artist}. 지금 바로 들어보세요!`,
-      metadataBase: new URL('https://onesongindie.com'),
+      title: `${title} - ${artist} | 친구가 추천한 곡 | 매일 트로트`,
+      description: `친구가 추천한 트로트 노래: ${title} - ${artist}. 지금 바로 들어보세요!`,
+      metadataBase: new URL('https://korean-trot.vercel.app/'),
       openGraph: {
         title: `${title} - ${artist}`,
-        description: `친구가 추천한 한국 인디 노래: ${title} - ${artist}`,
-        url: `https://onesongindie.com/shared`,
+        description: `친구가 추천한 트로트 노래: ${title} - ${artist}`,
+        url: `https://korean-trot.vercel.app/shared`,
         type: "website",
-        siteName: "들어볼래? 한 곡 Indie",
+        siteName: "매일 트로트",
         images: [
           {
-            url: "https://onesongindie.com/og-image.png",
+            url: "https://korean-trot.vercel.app/og-image.png",
             width: 885,
             height: 460,
             alt: `${title} - ${artist} 친구 추천 곡`
@@ -31,8 +31,8 @@ export async function generateMetadata({ searchParams }) {
       twitter: {
         card: "summary_large_image",
         title: `${title} - ${artist}`,
-        description: `친구가 추천한 한국 인디 노래: ${title} - ${artist}`,
-        images: ["https://onesongindie.com/og-image.png"],
+        description: `친구가 추천한 트로트 노래: ${title} - ${artist}`,
+        images: ["https://korean-trot.vercel.app/og-image.png"],
       },
       icons: {
         icon: [
@@ -46,29 +46,29 @@ export async function generateMetadata({ searchParams }) {
   }
   
   return {
-    title: "친구가 추천한 곡 | 들어볼래? 한 곡 Indie",
-    description: "친구가 추천한 한국 인디 음악을 들어보세요!",
-    metadataBase: new URL('https://onesongindie.com'),
+    title: "친구가 추천한 곡 | 매일 트로트",
+    description: "친구가 추천한 트로트 노래를 들어보세요!",
+    metadataBase: new URL('https://korean-trot.vercel.app/'),
     openGraph: {
-      title: "친구가 추천한 곡 | 들어볼래? 한 곡 Indie",
-      description: "친구가 추천한 한국 인디 음악을 들어보세요!",
-      url: "https://onesongindie.com/shared",
+      title: "친구가 추천한 곡 | 매일 트로트",
+      description: "친구가 추천한 트로트 노래를 들어보세요!",
+      url: "https://korean-trot.vercel.app/shared",
       type: "website",
-      siteName: "들어볼래? 한 곡 Indie",
+      siteName: "매일 트로트",
       images: [
         {
-          url: "https://onesongindie.com/og-image.png",
+          url: "https://korean-trot.vercel.app/og-image.png",
           width: 885,
           height: 460,
-          alt: "친구가 추천한 곡 - 들어볼래? 한 곡 Indie"
+          alt: "친구가 추천한 곡 - 매일 트로트"
         }
       ]
     },
     twitter: {
       card: "summary_large_image",
-      title: "친구가 추천한 곡 | 들어볼래? 한 곡 Indie",
-      description: "친구가 추천한 한국 인디 음악을 들어보세요!",
-      images: ["https://onesongindie.com/og-image.png"],
+      title: "친구가 추천한 곡 | 매일 트로트",
+      description: "친구가 추천한 트로트 노래를 들어보세요!",
+      images: ["https://korean-trot.vercel.app/og-image.png"],
     },
     icons: {
       icon: [
