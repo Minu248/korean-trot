@@ -7,7 +7,7 @@ import {
   TOAST_MESSAGES, 
   ANIMATION_TIMING 
 } from "@/config/constants";
-import { fetchRandomSongsFromSupabase } from "@/utils/supabaseUtils";
+import { fetchRandomSongsFromAPI } from "@/utils/supabaseUtils";
 import { 
   getTodayRecommendedSongs, 
   addTodayRecommendedSong 
@@ -45,8 +45,8 @@ export default function HomeContent() {
     try {
       setIsLoading(true);
       
-      // Supabase에서 랜덤 곡 데이터 가져오기
-      const fetchPromise = fetchRandomSongsFromSupabase(10);
+      // API를 통해 서버 사이드에서 랜덤 곡 데이터 가져오기
+      const fetchPromise = fetchRandomSongsFromAPI(10);
       
       // 최소 4초는 로딩 화면을 보여주기 위해 Promise.all 사용
       const [songs] = await Promise.all([
